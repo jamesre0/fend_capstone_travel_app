@@ -1,0 +1,48 @@
+{
+  "name": "fend_capstone_travel_app",
+  "version": "1.0.0",
+  "description": "A travel application to get weather forecast and images for a given location.",
+  "main": "src/server/server.js",
+  "scripts": {
+    "start": "node src/server/server.js",
+    "build-prod": "webpack --config webpack.prod.js",
+    "build-dev": "webpack-dev-server --config webpack.dev.js --open",
+    "test": "jest --config jest.config.js"
+  },
+  "dependencies": {
+    "cors": "^2.8.5",
+    "dayjs": "^1.11.9",
+    "dotenv": "^10.0.0",
+    "express": "^4.17.1",
+    "node-fetch": "^2.6.12"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.22.9",
+    "@babel/preset-env": "^7.22.9",
+    "@babel/preset-modules": "^0.1.6",
+    "@babel/preset-react": "^7.22.5",
+    "@babel/preset-typescript": "^7.16.7",
+    "@testing-library/dom": "^9.3.1",
+    "@testing-library/jest-dom": "^5.17.0",
+    "@testing-library/react": "^14.0.0",
+    "@testing-library/user-event": "^14.4.3",
+    "babel-jest": "^29.6.1",
+    "babel-loader": "^8.3.0",
+    "css-loader": "^6.5.1",
+    "dotenv-webpack": "^8.0.1",
+    "html-webpack-plugin": "^5.5.3",
+    "jest": "^27.5.1",
+    "jest-fetch-mock": "^3.0.3",
+    "mini-css-extract-plugin": "^2.6.2",
+    "nock": "^13.3.2",
+    "sass": "^1.47.0",
+    "sass-loader": "^12.3.0",
+    "style-loader": "^3.3.0",
+    "supertest": "^6.3.3",
+    "terser-webpack-plugin": "^5.2.3",
+    "webpack": "^5.64.4",
+    "webpack-cli": "^4.9.1",
+    "webpack-dev-server": "^4.7.2",
+    "workbox-webpack-plugin": "^7.0.0"
+  }
+}

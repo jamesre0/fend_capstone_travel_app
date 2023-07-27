@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Travel Application</title>
+</head>
+<body>
+  <header>
+    <h1>Travel Application</h1>
+  </header>
+  <main>
+    <form id="travelForm">
+      <p>This app will allow you to pick a location and select any day within a 7 day period to see the weather forecast for that area</p>
+      <label for="location">Location:</label>
+      <input type="text" id="location" placeholder="Enter the name of a country, city or postcode" required >
+      <br>
+      <label for="date">Date of Travel:</label>
+      <input type="date" id="date" required>
+      <br>
+      <button type="submit">Get Weather</button>
+    </form>
+    <div id="weatherInfo" style="display: none;">
+      <h2>Weather Information</h2>
+      <p id="forecastType"></p>
+      <p id="temperature"></p>
+      <p id="weatherDescription"></p>
+      <img id="locationImage" alt="Location Image">
+    </div>
+  </main>
+  <footer>
+    <p>Copyright &copy; 2023 James Eustaquio</p>
+  </footer>
+  <script>
+    // Check that service workers are supported
+    if ('serviceWorker' in navigator) {
+        // Use the window load event to keep the page load performant
+        window.addEventListener('load', () => {
+            navigator.serviceWorker.register('/service-worker.js');
+        });
+    }
+</script>
+</body>
+</html>
